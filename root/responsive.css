@@ -1,0 +1,42 @@
+/* responsive.css - Chỉ dùng cho responsive layout */
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  table#userTable {
+    font-size: 14px;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  th, td {
+    padding: 6px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  #response {
+    font-size: 15px;
+    padding: 8px;
+  }
+  a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+  #response {
+    font-size: 13px;
+    padding: 6px;
+  }
+  th, td {
+    font-size: 12px;
+    padding: 4px;
+  }
+}

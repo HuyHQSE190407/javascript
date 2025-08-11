@@ -17,11 +17,11 @@ if (btnSubmit) {
     if (currentTodoStr) {
       const currentTodo = JSON.parse(currentTodoStr);
       currentTodo.push(myTodo);
-
       localStorage.setItem("todo", JSON.stringify(currentTodo));
     } else {
       localStorage.setItem("todo", JSON.stringify([myTodo]));
     }
+    localStorage.setItem("response", "Thêm user thành công!");
     window.location.href = "index.html";
   });
 }
@@ -68,6 +68,18 @@ const handleDelete = (id) => {
     const todoList = JSON.parse(todoListStr);
     const newTodo = todoList.filter((todo, index) => todo.id + "" !== id);
     localStorage.setItem("todo", JSON.stringify(newTodo));
+    localStorage.setItem("response", "Xóa user thành công!");
     window.location.reload();
   }
+  
+const responseDiv = document.getElementById("response");
+const responseMsg = localStorage.getItem("response");
+if (responseDiv && responseMsg) {
+  responseDiv.innerText = responseMsg;
+  responseDiv.style.display = "block";
+  setTimeout(() => {
+    responseDiv.style.display = "none";
+    localStorage.removeItem("response");
+  }, 2000);
+}
 };
