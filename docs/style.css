@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blogs {
+    min-width: 80%;
+    max-width: 99%;
+    border-collapse: collapse;
+}
+
+#blogs thead th {
+    background-color: rgb(38, 214, 38);
+    color: white;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid;
+}
+
+
+#blogs  button {
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#blogs th, td {
+    border: 1px solid black;
+    height: 45px;
+    font-size: 20px;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d1d1d1;
+}
+
+
+tbody tr:hover {
+    background-color: rgb(101, 104, 104);
+    color: wheat;
+}
+
+tbody td {
+    text-align: center;
+}
+
+
+#id {
+    width: 3%;
+}
+
+#action {
+    width: 5%;
+}
